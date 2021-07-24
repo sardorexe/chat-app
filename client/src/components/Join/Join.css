@@ -1,1 +1,151 @@
-/* No CSS *//*# sourceMappingURL=Join.css.map */
+.join {
+  overflow: hidden;
+  height: 100vh;
+  background: url("bg2.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.join .box {
+  position: absolute;
+  width: 500px;
+  height: 400px;
+  border-radius: 45px;
+  background-color: #31e000;
+}
+
+.join-form {
+  width: 70%;
+  height: 500px;
+  background: rgba(255, 255, 255, 0.25);
+  -webkit-box-shadow: 0 8px 32px 0 rgba(138, 138, 138, 0.13);
+          box-shadow: 0 8px 32px 0 rgba(138, 138, 138, 0.13);
+  backdrop-filter: blur(8.5px);
+  -webkit-backdrop-filter: blur(8.5px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  padding: 20px;
+}
+
+.join-form .form-start {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.join-form .form-start .form-icon {
+  font-size: 75px;
+  color: #31e000;
+  margin: 10px 0px;
+}
+
+.join-form .form-start .form-t {
+  font-family: "Poppins", sans-serif;
+  color: #fff;
+  font-size: 25px;
+  text-align: center;
+}
+
+.join-form .form-register {
+  width: 100%;
+  max-height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 10px;
+}
+
+.join-form .form-register .global {
+  width: 70%;
+  outline: none;
+  margin-top: 20px;
+}
+
+.join-form .form-register .register-inp {
+  background-color: transparent;
+  border: 3px solid rgba(255, 255, 255, 0.377);
+  border-radius: 7px;
+  padding: 10px 0 10px 10px;
+  color: #fff;
+  -webkit-transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.join-form .form-register .register-inp:focus {
+  border-color: #fff;
+}
+
+.join-form .form-register .register-inp:focus::-webkit-input-placeholder {
+  color: rgba(255, 255, 255, 0.644);
+}
+
+.join-form .form-register .register-inp:focus:-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.644);
+}
+
+.join-form .form-register .register-inp:focus::-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.644);
+}
+
+.join-form .form-register .register-inp:focus::placeholder {
+  color: rgba(255, 255, 255, 0.644);
+}
+
+.join-form .form-register .register-btn {
+  margin-top: 47px;
+  padding: 12px 5px;
+  font-size: 20px;
+  border-radius: 7px;
+  border: 3px solid #fff;
+  color: #31e000;
+  cursor: pointer;
+  font-family: "Poppins", sans-serif;
+  -webkit-transition: all 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition: all 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.join-form .form-register .register-btn:hover {
+  background-color: transparent;
+  border-color: #31e000;
+}
+
+@media (max-width: 556px) {
+  .join-form {
+    width: 88%;
+  }
+  .join-form .form-start .form-t {
+    font-size: 20px;
+  }
+}
+/*# sourceMappingURL=Join.css.map */
