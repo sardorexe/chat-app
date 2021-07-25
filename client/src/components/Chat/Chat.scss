@@ -1,0 +1,221 @@
+$green: #31e000;
+$bg: #0b132b;
+
+html {
+  scroll-behavior: smooth;
+}
+
+.chat {
+  min-height: 100vh;
+  background-color: $bg;
+  .chat-up {
+    z-index: 11;
+    box-shadow: 0px 5px 5px -5px rgba(0, 0, 0, 0.6);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: $green;
+    user-select: none;
+    .room-t {
+      font-family: "Poppins", sans-serif;
+      color: $bg;
+    }
+    .username {
+      font-family: "Poppins", sans-serif;
+      color: $bg;
+    }
+    .typing-msg {
+      color: $bg;
+      font-family: "Poppins", sans-serif;
+      padding: 2px 5px;
+      border-radius: 8px;
+      transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      animation: typing 1.2s;
+      animation-iteration-count: 1;
+    }
+  }
+  .chat-messaging {
+    padding: 70px 0px;
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    .messages {
+      margin: 15px 0px;
+      width: 70%;
+      animation: messages 0.5s;
+      animation-iteration-count: 1;
+      p {
+        width: auto;
+      }
+    }
+    .System {
+      width: auto;
+      text-align: center;
+      margin: 10px 0px;
+      p {
+        background-color: #01030c;
+        color: $green;
+        font-family: "Montserrat", sans-serif;
+        padding: 3px 5px;
+        display: inline;
+        border-radius: 6px;
+      }
+    }
+    .other {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      margin-left: 10px;
+      .username {
+        font-family: "Poppins", sans-serif;
+        user-select: none;
+        color: $green;
+        font-size: 22px;
+        margin: 10px 0px;
+      }
+      .message {
+        background-color: $green;
+        color: $bg;
+        font-family: "Poppins", sans-serif;
+        padding: 9px 15px;
+        letter-spacing: 1px;
+        line-height: 28px;
+        font-weight: 600;
+        border-radius: 0px 22px 22px 22px;
+        margin-left: 10px;
+        display: inline;
+      }
+    }
+    .your {
+      display: flex;
+      flex-direction: column;
+      align-self: flex-end;
+      justify-content: flex-end;
+      align-items: flex-end;
+      margin-right: 10px;
+      .username {
+        font-family: "Poppins", sans-serif;
+        user-select: none;
+        color: #fff;
+        font-size: 22px;
+        margin: 10px 0px;
+      }
+      .message {
+        background-color: #fff;
+        color: $bg;
+        font-family: "Poppins", sans-serif;
+        padding: 9px 15px;
+        letter-spacing: 1px;
+        line-height: 28px;
+        font-weight: 600;
+        border-radius: 22px 0px 22px 22px;
+        margin-right: 10px;
+      }
+    }
+  }
+  .chat-down {
+    background-color: $bg;
+    z-index: 11;
+    height: 40px;
+    display: flex;
+    border: 2px solid $green;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    input {
+      background-color: transparent;
+      outline: none;
+      border: none;
+      padding-left: 10px;
+      color: #fff;
+      width: 90%;
+      &::placeholder {
+        color: rgba(255, 255, 255, 0.753);
+        font-family: "Poppins", sans-serif;
+        letter-spacing: 1px;
+      }
+    }
+    button {
+      background-color: $green;
+      width: 10%;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      color: #fff;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      align-items: center;
+      font-size: 14.5px;
+      padding: 5px 15px;
+      transition: all 0.2s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+      overflow: hidden;
+      i {
+        transition: all 0.2s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+      }
+      &:hover {
+        i {
+          transform: translateX(15%);
+        }
+      }
+    }
+  }
+}
+
+@keyframes typing {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes messages {
+  0% {
+    opacity: 0;
+    transform: translateY(20%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
+@media (max-width: 1036px) {
+  .chat {
+    .chat-down {
+      input {
+        width: 70%;
+      }
+      button {
+        width: 30%;
+        i {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 448px) {
+  .chat {
+    .chat-messaging {
+      .messages {
+        p {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}

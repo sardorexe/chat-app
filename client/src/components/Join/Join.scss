@@ -72,21 +72,27 @@ $pcolor: #31e000;
           color: rgba(255, 255, 255, 0.644);
         }
       }
-      .register-btn {
-        margin-top: 47px;
-        padding: 12px 5px;
-        font-size: 20px;
-        border-radius: 7px;
-        border: 3px solid #fff;
-        color: $pcolor;
-        cursor: pointer;
-        font-family: "Poppins", sans-serif;
-        transition: all 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
-        &:hover {
-          background-color: transparent;
-          border-color: $pcolor;
+      
+        .register-btn {
+          margin-top: 47px;
+          padding: 12px 5px;
+          font-size: 20px;
+          border-radius: 7px;
+          border: 3px solid #fff;
+          color: $pcolor;
+          cursor: pointer;
+          background-color: #fff;
+          text-align: center;
+          text-decoration: none;
+          font-family: "Poppins", sans-serif;
+          transition: all 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
+          &:hover {
+            background-color: transparent;
+            border-color: $pcolor;
+          }
         }
-      }
+      
+    
     }
   }
 }
